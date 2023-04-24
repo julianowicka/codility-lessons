@@ -1,0 +1,1 @@
+### This repository contains solutions to coding exercises from the "Lessons" section of Codility.com.
