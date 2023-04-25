@@ -34,3 +34,23 @@ Assume that:
 N and K are integers within the range [0..100];
 each element of array A is an integer within the range [−1,000..1,000].
 In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.*/
+
+function solution(A, K) {
+    const N = A.length;
+    if (N <= 1) {
+        return A;
+    }
+    K = K % N;
+    if (K === 0) {
+        return A;
+    }
+
+    const firstPart = A.slice(N - K);
+    const secondPart = A.slice(0, N - K);
+
+    return firstPart.concat(secondPart);
+}
+const A = [3, 8, 9, 7, 6];
+const K = 3;
+const rotatedA = solution(A, K);
+console.log(rotatedA);
