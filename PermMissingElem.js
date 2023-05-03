@@ -21,3 +21,12 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [0..100,000];
 the elements of A are all distinct;
 each element of array A is an integer within the range [1..(N + 1)].*/
+function solution(A) {
+    const N = A.length;
+    const sum = ((N + 1) * (N + 2)) / 2;
+    let missingElement = sum;
+    for (let i = 0; i < N; i++) {
+        missingElement -= A[i];
+    }
+    return missingElement;
+}
